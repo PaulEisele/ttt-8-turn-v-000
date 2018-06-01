@@ -55,6 +55,11 @@ def turn(board)
   index = input_to_index(input)
   move(board, index, "X")
   valid_move?(board, index)
-  display_board(board)
-
+  if valid_move?(index, board)
+      move(board, index)
+      display_board(board)
+    else
+      puts "That is an invalid entry!"
+      turn(board)
+    end 
 end
