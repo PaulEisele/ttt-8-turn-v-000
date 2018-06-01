@@ -56,8 +56,11 @@ def turn(board)
   move(board, index, "X")
   #valid_move?(board, index)
   if valid_move?(board, index)
+    counter = 0
+    while counter < 10
       move(board, index)
       display_board(board)
+      counter += 1
     else
       puts "That is an invalid entry!"
       turn(board)
