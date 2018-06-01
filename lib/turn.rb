@@ -28,15 +28,14 @@ def MOVE
 end
 
 #valid_move?
-def VALID_MOVE?(board, index)
+def valid_move?(board, index)
   if position_taken?(board, index)
     return false
   elsif index.between?(0,8)
     return true
   end
 end
-
-#position_taken?
+#position_taken? 
 def position_taken?(board, index)
   if board[index] == "X" || board[index] == "O"
     return true
@@ -48,3 +47,6 @@ def position_taken?(board, index)
     return false
   end
 end
+
+#turn
+def turn
