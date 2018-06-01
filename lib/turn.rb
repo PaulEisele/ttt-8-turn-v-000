@@ -15,7 +15,7 @@ def MOVE
   input=gets.strip
   index = input_to_index(input)
   move(board, index, "X")
-  puts display_board(board)
+  puts DISPLAY_BOARD(board)
 end
 
 #valid_move?
@@ -27,7 +27,7 @@ def VALID_MOVE?(board, index)
   end
 end
 
-#position_taken? 
+#position_taken?
 def position_taken?(board, index)
   if board[index] == "X" || board[index] == "O"
     return true
