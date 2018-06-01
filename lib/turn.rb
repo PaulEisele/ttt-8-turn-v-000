@@ -51,12 +51,13 @@ end
 #turn
 def turn(board)
   puts "Please enter 1-9:"
+  input = gets.chomp
   input=gets.strip
   index = input_to_index(input)
   move(board, index, "X")
   valid_move?(board, index)
-  if valid_move?(answer, board)
-      move(board, answer)
+  if valid_move?(input, board)
+      move(board, input)
       display_board(board)
     else
       puts "That is an invalid entry!"
