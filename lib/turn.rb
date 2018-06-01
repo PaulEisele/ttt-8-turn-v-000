@@ -35,7 +35,7 @@ def valid_move?(board, index)
     return true
   end
 end
-#position_taken? 
+#position_taken?
 def position_taken?(board, index)
   if board[index] == "X" || board[index] == "O"
     return true
@@ -49,4 +49,4 @@ def position_taken?(board, index)
 end
 
 #turn
-def turn
+#def turn
