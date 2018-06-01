@@ -61,6 +61,7 @@ def turn(board)
       move(board, index)
       display_board(board)
       counter += 1
+    end
     else
       puts "That is an invalid entry!"
       turn(board)
