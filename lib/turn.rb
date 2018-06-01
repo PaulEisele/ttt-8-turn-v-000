@@ -1,5 +1,5 @@
 #DISPLAY_BOARD
-def DISPLAY_BOARD(board)
+def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
@@ -15,7 +15,7 @@ def MOVE
   input=gets.strip
   index = input_to_index(input)
   move(board, index, "X")
-  puts DISPLAY_BOARD(board)
+  puts display_board(board)
 end
 
 #valid_move?
