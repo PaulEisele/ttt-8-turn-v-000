@@ -30,9 +30,6 @@ end
 #valid_move?
 def valid_move?(board, index)
   if position_taken?(board, index)
-    puts "Please enter 1-9:"
-    input=gets.strip
-    index = input_to_index(input)
     return false
   elsif index.between?(0,8)
     return true
