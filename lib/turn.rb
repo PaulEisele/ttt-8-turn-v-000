@@ -7,7 +7,18 @@ def DISPLAY_BOARD(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-# code your #valid_move? method here
+#Move
+def MOVE
+  puts "Welcome to Tic Tac Toe!"
+  board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  puts "Where would you like to go?"
+  input=gets.strip
+  index = input_to_index(input)
+  move(board, index, "X")
+  puts display_board(board)
+end
+
+#valid_move?
 def VALID_MOVE?(board, index)
   if position_taken?(board, index)
     return false
@@ -15,7 +26,8 @@ def VALID_MOVE?(board, index)
     return true
   end
 end
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+
+#position_taken? 
 def position_taken?(board, index)
   if board[index] == "X" || board[index] == "O"
     return true
@@ -26,14 +38,4 @@ def position_taken?(board, index)
   else board[index] == nil
     return false
   end
-end
-
-def MOVE
-  puts "Welcome to Tic Tac Toe!"
-  board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-  puts "Where would you like to go?"
-  input=gets.strip
-  index = input_to_index(input)
-  move(board, index, "X")
-  puts display_board(board)
 end
